@@ -23,25 +23,25 @@ angular
       // recommendation page
       .state('home', {
         url: '/',
-        templateUrl: 'home.html'
+        component: 'home'
       })
 
       // welcome survey page
       .state('survey', {
         url: '/survey',
-        templateUrl: 'music.html'
+        component: 'survey'
       })
 
       // settings page - very similary to survey
       .state('settings', {
         url: '/settings',
-        templateUrl: 'music.html'
+        component: 'settings'
       })
 
       // under the hood page - see how rec is being generated
       .state('internal', {
         url: '/internal',
-        templateUrl: 'music.html'
+        component: 'internal'
       })
       
 })

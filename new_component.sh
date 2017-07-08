@@ -36,11 +36,12 @@ echo '{{ $ctrl.name }}' >> $name/$name.html
 touch $name/$name.js
 echo >> $name/$name.js
 echo "angular" >> $name/$name.js
-echo "    .module('app')" >> $name/$name.js
-echo "    .component('$camel_case', {" >> $name/$name.js
-echo "        bindings: {}," >> $name/$name.js
-echo "        controller: controller," >> $name/$name.js
-echo "        templateUrl: components/$name/$name.html" >> $name/$name.js
+echo "  .module('app')" >> $name/$name.js
+echo "  .component('$camel_case', {" >> $name/$name.js
+echo "    bindings: {}," >> $name/$name.js
+echo "    controller: controller," >> $name/$name.js
+echo "    templateUrl: 'components/$name/$name.html'" >> $name/$name.js
+echo "  })" >> $name/$name.js
 echo >> $name/$name.js
 echo "function controller() {" >> $name/$name.js
 echo "  var vm = this">> $name/$name.js
@@ -50,6 +51,6 @@ echo "}" >> $name/$name.js
 # add imports
 
 cd ../
-import_statements="    <link href='$name.css' rel='stylesheet'>\n    <script src='$name.js'></script>"
+import_statements="\t\t<link href='components/$name/$name.css' rel='stylesheet'>\n\t\t<script src='components/$name/$name.js'></script>"
 /usr/local/bin/gsed -i "/<!-- component imports -->/a$import_statements" index.html
 
