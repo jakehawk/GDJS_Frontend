@@ -51,6 +51,6 @@ echo "}" >> $name/$name.js
 # add imports
 
 cd ../
-import_statements="\t\t<link href='components/$name/$name.css' rel='stylesheet'>\n\t\t<script src='components/$name/$name.js'></script>"
+import_statements="<link href='components/$name/$name.css' rel='stylesheet'>\n<script src='components/$name/$name.js'></script>"
 /usr/local/bin/gsed -i "/<!-- component imports -->/a$import_statements" index.html
 
