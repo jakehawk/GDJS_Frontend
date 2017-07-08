@@ -9,4 +9,6 @@ angular
 function controller() {
   var vm = this
   vm.name = 'internal'
+
+  
 }
