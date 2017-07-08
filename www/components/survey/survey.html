@@ -1,9 +1,16 @@
-<ion-slide-box on-slide-changed="slideChanged(index)">
+<ion-slide-box on-slide-changed="slideChanged(survey)">
 
   <ion-slide>
+    <h1>Welcome!</h1>
+    <p>Answer the following questions to get the next movie you should watch!</p>
+    <p>We think they're are too many options to go through in the world today, so we thought that giving you one option can speed up the process 🙂</p>
+  </ion-slide>
+
+  <form class="" action="survey.html" method="post">
+  <ion-slide>
     <h3>Have You Seen Almost Famous?</h3>
-    <input type="button" name="yes" value="yes">
-    <input type="button" name="no" value="no">
+    <input type="button" name="FamousYes" value="yes">
+    <input type="button" name="FamousNo" value="no">
   </ion-slide>
 
   <ion-slide>
@@ -28,24 +35,32 @@
 
   <ion-slide>
     <h3>Do You Like Romantic Comedies</h3>
-    <input type="button" name="yes" value="yes">
-    <input type="button" name="no" value="no">
+    <input type="button" name="RomcomYes" value="yes">
+    <input type="button" name="RomcomNo" value="no">
   </ion-slide>
 
   <ion-slide>
     <h3>Would You Like To Cry</h3>
-    <input type="button" name="yes" value="yes">
-    <input type="button" name="no" value="no">
+    <input type="button" name="CryYes" value="yes">
+    <input type="button" name="CryNo" value="no">
   </ion-slide>
 
   <ion-slide>
     <h3>Do You Know Who This Actor Is?</h3>
-    <img src="" alt="Nick Cage Img">
-    <input type="button" name="yes" value="yes">
-    <input type="button" name="no" value="no">
+    <img src="http://www.bloodygoodhorror.com/bgh/files/reviews/caps/vampires-kiss.jpg" alt="Cage">
+    <input type="button" name="CageYes" value="yes">
+    <input type="button" name="CageNo" value="no">
     <!-- if no then it automatically recommends "Snake Eyes" -->
   </ion-slide>
 
-  
+  <ion-slide>
+    <h3>Ready For Your Result?!</h3>
+    <input type="submit" name="YAY!" value="yes">
+    <!-- if no then it automatically recommends "Snake Eyes" -->
+  </ion-slide>
+
+</form>
+
+
 
 </ion-slide-box>
