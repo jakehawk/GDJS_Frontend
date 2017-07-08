@@ -22,14 +22,16 @@ mkdir $name
 # create css
 
 touch $name/$name.css
-echo "$name {" >> $name/$name.css
+echo ".$name {" >> $name/$name.css
 echo "  color: "$color";" >> $name/$name.css
 echo "}" >> $name/$name.css
 
 # create html
 
 touch $name/$name.html
+echo '<div class="'$name'">' >> $name/$name.html
 echo '{{ $ctrl.name }}' >> $name/$name.html
+echo '</div>' >> $name/$name.html
 
 # create js
 
