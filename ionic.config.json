@@ -1,4 +1,8 @@
 {
   "name": "att_hack",
-  "app_id": ""
+  "app_id": "",
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ]
 }
