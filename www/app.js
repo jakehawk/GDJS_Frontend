@@ -18,30 +18,41 @@ angular
       }
     })
   })
-  .config(function($stateProvider) {
+  .config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/')
+
     $stateProvider
       // recommendation page
       .state('home', {
         url: '/',
-        component: 'home'
+        templateUrl: 'router.hack.html'
       })
 
       // welcome survey page
       .state('survey', {
         url: '/survey',
-        component: 'survey'
+        templateUrl: 'router.hack.html'
       })
 
       // settings page - very similary to survey
       .state('settings', {
         url: '/settings',
-        component: 'settings'
+        templateUrl: 'router.hack.html'
       })
 
       // under the hood page - see how rec is being generated
       .state('internal', {
         url: '/internal',
-        component: 'internal'
+        templateUrl: 'router.hack.html'
       })
       
-})
+  })
+  .controller('RoutingController', ['$scope', '$stateParams', '$state', function($scope, $stateParams, $state) {
+      this.name = "test name"
+
+       this.state = $state
+       this.stateName = $state.current.name
+       console.log($state)
+    }])
+
+  
