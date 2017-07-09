@@ -13,16 +13,11 @@ function controller(MovieFactory, $ionicLoading, $timeout) {
   var vm = this
 
   vm.surveyOpen = false
-  vm.openSurvey = function() {
-    vm.surveyOpen = true
-  }
-
-  vm.meta = false
-  vm.openMeta = function() {
-    vm.meta = true
-  }
-  vm.closeMeta = function() {
-    vm.meta = false
+  vm.browserOpen = false
+  
+  vm.close = function() {
+    vm.surveyOpen = false
+    vm.browserOpen = false
   }
 
   vm.startLoad = function() {
@@ -45,6 +40,7 @@ function controller(MovieFactory, $ionicLoading, $timeout) {
       .getRandom()
       .then(function(response) {
         vm.movie = response.data.randomMovie
+        vm.movie.link = 'https://www.warnerbros.com/' + vm.movie.title
         vm.loading = false
         vm.meta = false
         $timeout(vm.endLoad(), 250)
@@ -59,6 +55,7 @@ function controller(MovieFactory, $ionicLoading, $timeout) {
       .getGenre(genre)
       .then(function(response) {
         vm.movie = response.data.randomMovie
+        vm.movie.link = 'https://www.warnerbros.com/' + vm.movie.title
         vm.loading = false
         vm.meta = false
         $timeout(vm.endLoad(), 250)

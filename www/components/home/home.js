@@ -3,7 +3,8 @@ angular
 	.module('app')
 	.component('home', {
 	  bindings: {
-	  	movie: '='
+	  	movie: '=',
+	  	openBrowser: '&'
 	  },
 	  controller: controller,
 	  templateUrl: "components/home/home.html"

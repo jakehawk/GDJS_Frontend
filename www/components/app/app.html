@@ -10,19 +10,22 @@
 		<survey
 			get-genre="$ctrl.getGenre(arg)"
 			ng-if="$ctrl.surveyOpen"
-			close-meta="$ctrl.closeMeta()" 
 		></survey>
-		<home movie="$ctrl.movie"></home>
+		<browser-view
+			link="$ctrl.movie.link"
+			ng-if="$ctrl.browserOpen"
+		></browser-view>
+		<home movie="$ctrl.movie" open-browser="$ctrl.browserOpen = true"></home>
 
-		<div id="survey-button" class="assertive action-button" on-tap="$ctrl.surveyOpen = true" ng-hide="$ctrl.surveyOpen" >
+		<div id="survey-button" class="assertive action-button" on-tap="$ctrl.surveyOpen = true" ng-if="!$ctrl.surveyOpen && !$ctrl.browserOpen" >
 			<i class="ion-clipboard"></i>
 		</div>
 
-		<div id="movie-button" class="assertive action-button" on-tap="$ctrl.getRandom()" ng-hide="$ctrl.surveyOpen">
+		<div id="movie-button" class="assertive action-button" on-tap="$ctrl.getRandom()" ng-if="!$ctrl.surveyOpen && !$ctrl.browserOpen">
 			<i class="ion-android-film"></i>
 		</div>
 
-		<div id="close-button" class="assertive action-button" on-tap="$ctrl.surveyOpen = false" ng-show="$ctrl.surveyOpen">
+		<div id="close-button" class="assertive action-button" on-tap="$ctrl.close()" ng-if="$ctrl.surveyOpen || $ctrl.browserOpen">
 			<i class="ion-android-close"></i>
 		</div>
 
