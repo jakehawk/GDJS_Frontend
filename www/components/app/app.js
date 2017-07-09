@@ -40,7 +40,7 @@ function controller(MovieFactory, $ionicLoading, $timeout) {
       .getRandom()
       .then(function(response) {
         vm.movie = response.data.randomMovie
-        vm.movie.link = 'https://www.warnerbros.com/' + vm.movie.title
+        vm.movie.link = 'https://www.warnerbros.com/search?qt=' + encodeURIComponent(vm.movie.title)
         vm.loading = false
         vm.meta = false
         $timeout(vm.endLoad(), 250)
@@ -55,7 +55,7 @@ function controller(MovieFactory, $ionicLoading, $timeout) {
       .getGenre(genre)
       .then(function(response) {
         vm.movie = response.data.randomMovie
-        vm.movie.link = 'https://www.warnerbros.com/' + vm.movie.title
+        vm.movie.link = 'https://www.warnerbros.com/search?qt=' + encodeURIComponent(vm.movie.title)
         vm.loading = false
         vm.meta = false
         $timeout(vm.endLoad(), 250)

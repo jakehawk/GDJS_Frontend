@@ -3,9 +3,21 @@ browser-view {
 	height: 100%;
 	z-index: 4;
 	position: absolute;
+	overflow: scroll;
+	background-color: white;
 }
 
+/*.white-bg {
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	position: absolute;
+	background-color: white;
+
+}*/
+
 browser-view iframe {
+	background: url(../../assets/spinner.gif) center center no-repeat;
 	width: 100%;
 	height: 100%;
 }
