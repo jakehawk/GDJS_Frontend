@@ -29,8 +29,9 @@ function controller(MovieFactory, $ionicLoading) {
 	 	MovieFactory
 	 		.getRandom()
 	 		.then(function(response) {
+	 			console.log(response)
 			  vm.endLoad()
-	 			var {title, image} = response.data
+	 			var {title, image} = response.data.randomMovie
 			  vm.loading = false
 			  vm.title = title
 			  vm.imageUrl = image
