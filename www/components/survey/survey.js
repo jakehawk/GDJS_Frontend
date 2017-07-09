@@ -46,6 +46,7 @@ function controller($scope, $state, $ionicSlideBoxDelegate) {
 	  // Just waste all this data, only use genre info
 
 	  var genre = genreArr[Math.floor(Math.random() * genreArr.length)]
+	  vm.formData = {}
 	  // console.log('genre', genre)
 
 	  vm.startGetGenre({arg: genre})
