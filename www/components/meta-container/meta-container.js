@@ -12,6 +12,6 @@ function controller() {
   vm.active = 'internal'
   vm.setActive = function(tab) {
 	  vm.active = tab
-	  console.log('navigate', tab)
+	  // console.log('navigate', tab)
   }
 }

@@ -17,6 +17,11 @@ function controller() {
 
   vm.meta = false
   vm.toggleMeta = function() {
-  	vm.meta = !vm.meta
+    if (vm.surveyOpen) {
+    	vm.meta = false
+      vm.surveyOpen = false
+    } else {
+      vm.meta = !vm.meta
+    }
   }
 }
