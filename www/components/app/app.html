@@ -2,14 +2,25 @@
 	<ion-pane>
 
 		<!-- <meta-container></meta-container> -->
-		<meta-container 
+<!-- 		<meta-container 
 			ng-if="$ctrl.meta" 
 			close-meta="$ctrl.closeMeta()" 
 			get-genre="$ctrl.getGenre(arg)"
-		></meta-container>
+		></meta-container> -->
+		<survey
+			get-genre="$ctrl.getGenre(arg)"
+			ng-if="$ctrl.surveyOpen"
+			close-meta="$ctrl.closeMeta()" 
+		></survey>
 		<home movie="$ctrl.movie"></home>
 
-		<div class="toggle" on-tap="$ctrl.toggleMeta()" on-hold="$ctrl.getRandom()"></div>
+		<div id="survey-button" class="assertive action-button" on-tap="$ctrl.surveyOpen = true" ng-hide="$ctrl.surveyOpen" >
+			<i class="ion-clipboard"></i>
+		</div>
+
+		<div id="movie-button" class="assertive action-button" on-tap="$ctrl.getRandom()">
+			<i class="ion-android-film"></i>
+		</div>
 
 	</ion-pane>
 

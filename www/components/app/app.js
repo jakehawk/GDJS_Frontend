@@ -18,14 +18,15 @@ function controller(MovieFactory, $ionicLoading, $timeout) {
   }
 
   vm.meta = false
-  vm.toggleMeta = function() {
-    vm.meta = !vm.meta
+  vm.openMeta = function() {
+    vm.meta = true
   }
   vm.closeMeta = function() {
     vm.meta = false
   }
 
   vm.startLoad = function() {
+    vm.surveyOpen = false
     vm.loading = true
     $ionicLoading.show({
       template: 'Fetching movie...'

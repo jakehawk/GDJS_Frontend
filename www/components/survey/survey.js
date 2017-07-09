@@ -10,9 +10,9 @@ angular
 	  templateUrl: "components/survey/survey.html"
 	})
 
-controller.$inject = ['$scope', '$state', '$ionicSlideBoxDelegate']
+controller.$inject = ['$scope', '$ionicSlideBoxDelegate']
 
-function controller($scope, $state, $ionicSlideBoxDelegate) {
+function controller($scope, $ionicSlideBoxDelegate) {
   var vm = this
 
   vm.formData = {}
@@ -53,15 +53,15 @@ function controller($scope, $state, $ionicSlideBoxDelegate) {
 	  vm.closeMeta()
   }
 
-	$scope.next = function() {
+	vm.next = function() {
 		$ionicSlideBoxDelegate.next();
 	};
-	$scope.previous = function() {
+	vm.previous = function() {
 		$ionicSlideBoxDelegate.previous();
 	};
 
 	// Called each time the slide changes
-	$scope.slideChanged = function(index) {
+	vm.slideChanged = function(index) {
 		$scope.slideIndex = index;
 	};
 }
