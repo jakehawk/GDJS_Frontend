@@ -4,7 +4,7 @@ angular
 	.component('survey', {
 	  bindings: {
 	  	closeMeta: '&',
-	  	startGetGenre: '&'
+	  	getGenre: '&'
 	  },
 	  controller: controller,
 	  templateUrl: "components/survey/survey.html"
@@ -49,7 +49,7 @@ function controller($scope, $state, $ionicSlideBoxDelegate) {
 	  vm.formData = {}
 	  // console.log('genre', genre)
 
-	  vm.startGetGenre({arg: genre})
+	  vm.getGenre({arg: genre})
 	  vm.closeMeta()
   }
 

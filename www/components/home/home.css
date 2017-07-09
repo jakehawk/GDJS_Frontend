@@ -3,3 +3,31 @@
 	height: 100%;
 	width: 100%;
 }
+
+.home .main {
+	position: relative;
+	background-color: #252525;
+	display: flex;
+	height: calc(100% - 120px);
+}
+
+.home .main img{
+	width: 100%;
+}
+
+.home .main .gradient {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  height: 175px;
+  width: 100%;
+  background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.15), rgba(255,255,255,1));
+}
+
+.home .details {
+	height: 130px;
+}
+
+.home .details a {
+	text-decoration: none;
+}

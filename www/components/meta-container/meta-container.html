@@ -9,7 +9,7 @@
 		<survey 
 			ng-if="$ctrl.active === 'survey'" 
 			close-meta="$ctrl.closeMeta()" 
-			start-get-genre="$ctrl.continueGetGenre(arg)"
+			get-genre="$ctrl.getGenre({arg: arg})"
 		></survey>
 		<internal ng-if="$ctrl.active === 'internal'" ></internal>
 	</div>
