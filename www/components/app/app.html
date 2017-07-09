@@ -3,7 +3,8 @@
 
 		<!-- <meta-container></meta-container> -->
 		<meta-container ng-if="$ctrl.meta"></meta-container>
-		<home></home>
+		<survey ng-if="$ctrl.surveyOpen"></survey>
+		<home open-survey="$ctrl.openSurvey()"></home>
 
 		<div class="toggle" on-touch="$ctrl.toggleMeta()"></div>
 
