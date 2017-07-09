@@ -4,22 +4,24 @@
 	height: 100%;
 	width: 100%;
 	z-index: 5;
+
+	padding: 1em 3em;
 }
 
 .meta-container .navigation {
-	margin-top: 2em;
+	margin: 2em 0;
 	display: flex;
 	justify-content: center;
+
 }
 
 .meta-container .navigation li {
 	margin: 0 0.5em;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	color: #808080;
 	padding: 0 0.5em 0.25em;
 	border-bottom: 1px solid transparent;
 }
-
 
 
 .meta-container .navigation li.active {

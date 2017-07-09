@@ -1,8 +1,10 @@
 <ion-view class="app wrapper">
+	<ion-pane>
 
-	<meta-container ng-if="$ctrl.meta"></meta-container>
-	<home></home>
+		<!-- <meta-container></meta-container> -->
+		<meta-container ng-if="$ctrl.meta"></meta-container>
+		<home></home>
 
-	<div class="toggle" on-touch="$ctrl.toggleMeta()"></div>
+	</ion-pane>
 
 </ion-view>
