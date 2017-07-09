@@ -1,3 +1,10 @@
 <div class="meta-container">
-{{ $ctrl.name }}
+
+	<ul class="navigation">
+		<li on-touch="$ctrl.setActive('internal')" ng-class="{active: $ctrl.active === 'internal'}">Internal</li>	
+		<li on-touch="$ctrl.setActive('settings')" ng-class="{active: $ctrl.active === 'settings'}">Settings</li>
+	</ul>
+
+	<internal ng-if="$ctrl.active === 'internal'" ></internal>
+	<settings ng-if="$ctrl.active === 'settings'" ></settings>
 </div>
