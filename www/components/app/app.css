@@ -15,7 +15,7 @@
 
 	position: absolute;
 
-	right: 25px;
+	right: 15px;
 	background: white;
 
 
@@ -24,7 +24,7 @@
 	border-radius: 50%;
 }
 
-.app #movie-button.action-button {
+#movie-button.action-button, #close-button.action-button {
 	font-size: 2.25rem;
 
 	z-index: 10;
@@ -35,7 +35,7 @@
 	width: 50px;
 }
 
-.app #survey-button.action-button {
+#survey-button.action-button {
 	font-size: 2.25rem;
 
 	z-index: 10;

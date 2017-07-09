@@ -18,8 +18,12 @@
 			<i class="ion-clipboard"></i>
 		</div>
 
-		<div id="movie-button" class="assertive action-button" on-tap="$ctrl.getRandom()">
+		<div id="movie-button" class="assertive action-button" on-tap="$ctrl.getRandom()" ng-hide="$ctrl.surveyOpen">
 			<i class="ion-android-film"></i>
+		</div>
+
+		<div id="close-button" class="assertive action-button" on-tap="$ctrl.surveyOpen = false" ng-show="$ctrl.surveyOpen">
+			<i class="ion-android-close"></i>
 		</div>
 
 	</ion-pane>
