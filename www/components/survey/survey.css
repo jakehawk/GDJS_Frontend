@@ -2,6 +2,24 @@ survey {
   color: darkcyan;
 }
 
+h3 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+img {
+  width: 100%
+}
+
+button {
+  margin-left: 35%;
+}
+
 .slider {
   height: 100%
+}
+
+.welcome-container {
+  text-align: center;
+  padding: 10px 35px;
 }
