@@ -9,9 +9,9 @@ angular
 	  templateUrl: "components/home/home.html"
 	})
 
-controller.$inject = ['MovieFactory', '$ionicLoading']
+controller.$inject = ['MovieFactory', '$ionicLoading', '$timeout']
 
-function controller(MovieFactory, $ionicLoading) {
+function controller(MovieFactory, $ionicLoading, $timeout) {
   var vm = this
 
   vm.startLoad = function() {
@@ -28,15 +28,16 @@ function controller(MovieFactory, $ionicLoading) {
 
   vm.getRandom = function() {
 	  vm.startLoad()
+	  vm.title = undefined
+	  vm.imageUrl = undefined
 	 	MovieFactory
 	 		.getRandom()
 	 		.then(function(response) {
-	 			console.log(response)
-			  vm.endLoad()
 	 			var {title, image} = response.data.randomMovie
 			  vm.loading = false
 			  vm.title = title
 			  vm.imageUrl = image
+			  $timeout(vm.endLoad(), 200)
 	 		})
   }
   vm.getRandom()
