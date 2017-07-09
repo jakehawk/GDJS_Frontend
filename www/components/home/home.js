@@ -7,9 +7,37 @@ angular
 	  templateUrl: "components/home/home.html"
 	})
 
-function controller() {
+controller.$inject = ['MovieFactory', '$ionicLoading']
+
+function controller(MovieFactory, $ionicLoading) {
   var vm = this
-  vm.title = 'Almost Famous'
-  vm.info = 'Starring Kate Hudson'
-  vm.imageUrl = 'https://d19p213wjrwt85.cloudfront.net/uvvu-images/0941ADA74230B31EE05316345B0AA37F'
+
+  vm.startLoad = function() {
+  	vm.loading = true
+    $ionicLoading.show({
+      template: 'Loading...'
+    })
+  }
+
+  vm.endLoad = function(){
+  	vm.loading = false
+    $ionicLoading.hide()
+  }
+
+  vm.getRandom = function() {
+	  vm.startLoad()
+	 	MovieFactory
+	 		.getRandom()
+	 		.then(function(response) {
+			  vm.endLoad()
+	 			var {title, image} = response.data
+			  vm.loading = false
+			  vm.title = title
+			  vm.imageUrl = image
+	 		})
+  }
+  vm.getRandom()
+
+
 }
+

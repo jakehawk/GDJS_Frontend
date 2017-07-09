@@ -1,11 +1,11 @@
 
-<ion-content class="home">
-  <div class="list card">
+<ion-content ng-show="$ctrl.loading"></ion-content>
+
+<ion-content ng-hide="$ctrl.loading" class="home">
 
   <div class="item item-avatar">
-    <img src="https://d19p213wjrwt85.cloudfront.net/uvvu-images/0941ADA74230B31EE05316345B0AA37F">
+    <img ng-src="{{ $ctrl.image }}">
     <h2>{{ $ctrl.title }}</h2>
-    <p>{{ $ctrl.info }}</p>
   </div>
 
   <div class="item item-image">
@@ -17,11 +17,11 @@
     Start Watching
   </a>
 
-	</div>
 	<button class="button button-full button-assertive">
 	  Take the Survey
 	</button>
-	<button class="button button-full button-assertive">
-  	Store in Your Movie Box
+
+	<button on-touch="$ctrl.getRandom()" class="button button-full button-assertive">
+  	Get New Recommendation
 	</button>
 </ion-content>
