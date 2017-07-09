@@ -3,9 +3,7 @@ angular
 	.module('app')
 	.component('home', {
 	  bindings: {
-	  	title: '=',
-	  	image: '=',
-	  	year: '='
+	  	movie: '='
 	  },
 	  controller: controller,
 	  templateUrl: "components/home/home.html"

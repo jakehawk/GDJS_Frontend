@@ -2,8 +2,12 @@
 	<ion-pane>
 
 		<!-- <meta-container></meta-container> -->
-		<meta-container ng-if="$ctrl.meta" close-meta="$ctrl.closeMeta()"></meta-container>
-		<home title="$ctrl.title" image="$ctrl.image" year="$ctrl.year"></home>
+		<meta-container 
+			ng-if="$ctrl.meta" 
+			close-meta="$ctrl.closeMeta()" 
+			get-genre="$ctrl.getGenre(arg)"
+		></meta-container>
+		<home movie="$ctrl.movie"></home>
 
 		<div class="toggle" on-tap="$ctrl.toggleMeta()" on-hold="$ctrl.getRandom()"></div>
 

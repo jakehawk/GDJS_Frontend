@@ -3,7 +3,8 @@ angular
 	.module('app')
 	.component('survey', {
 	  bindings: {
-	  	closeMeta: '&'
+	  	closeMeta: '&',
+	  	startGetGenre: '&'
 	  },
 	  controller: controller,
 	  templateUrl: "components/survey/survey.html"
@@ -25,12 +26,13 @@ function controller($scope, $state, $ionicSlideBoxDelegate) {
 
 	  var genreArr = []
 	  for (var key in vm.formData.genre) {
-	  	if (vm.formData.genre[key]) genreArr.push(key)
+	  	console.log('formData key', key)
+	  	genreArr.push(key)
 	  }
 
 	  var moodArr = []
 	  for (var key in vm.formData.mood) {
-	  	if (vm.formData.mood[key]) moodArr.push(key)
+	  	moodArr.push(key)
 	  }
 
 	  requestData.famousSeen = famousSeen
@@ -41,7 +43,12 @@ function controller($scope, $state, $ionicSlideBoxDelegate) {
 	  requestData.genres = genreArr
 
 	  console.log(requestData)
-	  // TO DO - send request data off somewhere
+	  // Just waste all this data, only use genre info
+
+	  var genre = genreArr[Math.floor(Math.random() * genreArr.length)]
+	  // console.log('genre', genre)
+
+	  vm.startGetGenre({arg: genre})
 	  vm.closeMeta()
   }
 

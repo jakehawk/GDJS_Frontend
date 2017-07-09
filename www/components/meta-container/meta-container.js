@@ -3,7 +3,8 @@ angular
   .module('app')
   .component('metaContainer', {
     bindings: {
-      closeMeta: '&'
+      closeMeta: '&',
+      getGenre: '&'
     },
     controller: controller,
     templateUrl: 'components/meta-container/meta-container.html'
@@ -15,5 +16,10 @@ function controller() {
   vm.setActive = function(tab) {
 	  vm.active = tab
 	  // console.log('navigate', tab)
+  }
+
+  vm.continueGetGenre = function(arg) {
+    // console.log('arg', arg)
+    vm.getGenre({arg: arg})
   }
 }

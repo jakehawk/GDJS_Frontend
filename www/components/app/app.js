@@ -28,7 +28,7 @@ function controller(MovieFactory, $ionicLoading, $timeout) {
   vm.startLoad = function() {
     vm.loading = true
     $ionicLoading.show({
-      template: 'Loading...'
+      template: 'Fetching movie...'
     })
   }
 
@@ -39,22 +39,30 @@ function controller(MovieFactory, $ionicLoading, $timeout) {
 
   vm.getRandom = function() {
     vm.startLoad()
-    vm.title = undefined
-    vm.image = undefined
-    vm.year = undefined
+    vm.movie = {}
     MovieFactory
       .getRandom()
       .then(function(response) {
-        var {title, image, year} = response.data.randomMovie
+        vm.movie = response.data.randomMovie
         vm.loading = false
-        vm.title = title
-        vm.image = image
-        vm.year = year
-        $timeout(vm.endLoad(), 200)
         vm.meta = false
+        $timeout(vm.endLoad(), 250)
       })
   }
   vm.getRandom()
+
+  vm.getGenre = function(genre) {
+    vm.startLoad()
+    vm.movie = {}
+    MovieFactory
+      .getGenre(genre)
+      .then(function(response) {
+        vm.movie = response.data.randomMovie
+        vm.loading = false
+        vm.meta = false
+        $timeout(vm.endLoad(), 250)
+      })
+  }
 
 }
 

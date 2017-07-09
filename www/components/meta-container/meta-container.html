@@ -2,11 +2,15 @@
 
 	<ul class="navigation">
 		<li on-touch="$ctrl.setActive('survey')" ng-class="{active: $ctrl.active === 'survey'}">Survey</li>
-		<li on-touch="$ctrl.setActive('internal')" ng-class="{active: $ctrl.active === 'internal'}">Internal</li>	
+		<li on-touch="$ctrl.setActive('internal')" ng-class="{active: $ctrl.active === 'internal'}">About</li>	
 	</ul>
 
 	<div>
-		<survey ng-if="$ctrl.active === 'survey'" close-meta="$ctrl.closeMeta()"></survey>
+		<survey 
+			ng-if="$ctrl.active === 'survey'" 
+			close-meta="$ctrl.closeMeta()" 
+			start-get-genre="$ctrl.continueGetGenre(arg)"
+		></survey>
 		<internal ng-if="$ctrl.active === 'internal'" ></internal>
 	</div>
 
