@@ -5,3 +5,28 @@
 	width: 100%;
 	z-index: 5;
 }
+
+.meta-container .navigation {
+	margin-top: 2em;
+	display: flex;
+	justify-content: center;
+}
+
+.meta-container .navigation li {
+	margin: 0 0.5em;
+	font-size: 1rem;
+	color: #808080;
+	padding: 0 0.5em 0.25em;
+	border-bottom: 1px solid transparent;
+}
+
+
+
+.meta-container .navigation li.active {
+	color: #252525;
+	border-bottom: 1px solid #252525;
+}
+
+
+
+

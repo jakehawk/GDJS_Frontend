@@ -9,5 +9,9 @@ angular
 
 function controller() {
   var vm = this
-  vm.name = 'meta-container'
+  vm.active = 'internal'
+  vm.setActive = function(tab) {
+	  vm.active = tab
+	  console.log('navigate', tab)
+  }
 }
