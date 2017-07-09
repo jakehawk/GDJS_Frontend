@@ -4,8 +4,6 @@
 	height: 100%;
 	width: 100%;
 	z-index: 5;
-
-	padding: 1em 3em;
 }
 
 .meta-container .navigation {
@@ -20,13 +18,13 @@
 	font-size: 1.5rem;
 	color: #808080;
 	padding: 0 0.5em 0.25em;
-	border-bottom: 1px solid transparent;
+	border-bottom: 2px solid transparent;
 }
 
 
 .meta-container .navigation li.active {
 	color: #252525;
-	border-bottom: 1px solid #252525;
+	border-bottom: 2px solid #252525;
 }
 
 

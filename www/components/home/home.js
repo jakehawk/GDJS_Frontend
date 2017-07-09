@@ -2,9 +2,7 @@
 angular
 	.module('app')
 	.component('home', {
-	  bindings: {
-	  	openSurvey: '&'
-	  },
+	  bindings: {},
 	  controller: controller,
 	  templateUrl: "components/home/home.html"
 	})

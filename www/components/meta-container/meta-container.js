@@ -9,7 +9,7 @@ angular
 
 function controller() {
   var vm = this
-  vm.active = 'internal'
+  vm.active = 'survey'
   vm.setActive = function(tab) {
 	  vm.active = tab
 	  // console.log('navigate', tab)

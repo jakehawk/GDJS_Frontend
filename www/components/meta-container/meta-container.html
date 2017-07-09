@@ -1,13 +1,13 @@
 <div class="meta-container">
 
 	<ul class="navigation">
+		<li on-touch="$ctrl.setActive('survey')" ng-class="{active: $ctrl.active === 'survey'}">Survey</li>
 		<li on-touch="$ctrl.setActive('internal')" ng-class="{active: $ctrl.active === 'internal'}">Internal</li>	
-		<li on-touch="$ctrl.setActive('settings')" ng-class="{active: $ctrl.active === 'settings'}">Settings</li>
 	</ul>
 
 	<div>
+		<survey ng-if="$ctrl.active === 'survey'" ></survey>
 		<internal ng-if="$ctrl.active === 'internal'" ></internal>
-		<settings ng-if="$ctrl.active === 'settings'" ></settings>
 	</div>
 
 </div>
