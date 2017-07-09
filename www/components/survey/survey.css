@@ -24,6 +24,10 @@ survey button {
   height: 100%
 }
 
+.slider-pager {
+  bottom: 1px;
+}
+
 survey .item {
   /*padding: 0;*/
 }

@@ -24,10 +24,11 @@
         <h3>What genres do you like?</h3>
         <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.drama">Drama</ion-checkbox>
         <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.comedy">Comedy</ion-checkbox>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.action">Action</ion-checkbox>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.mystery">Mystery</ion-checkbox>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.science">Science Fiction</ion-checkbox>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.crime">Crime</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.horror">Horror</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.action">Action &amp; Adventure</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.romance">Romance</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.crime">Crime and Mystery</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.science">Sci-fi &amp; Fantasy</ion-checkbox>
       </ion-list>
     </div>
   </ion-slide>
@@ -68,7 +69,7 @@
   </ion-slide>
 
   <ion-slide>
-    <div class="padding">   
+    <div class="padding">
       <ion-list>
         <h3>Do you know who this man is?</h3>
         <img src="http://www.bloodygoodhorror.com/bgh/files/reviews/caps/vampires-kiss.jpg" alt="Cage">
@@ -81,8 +82,8 @@
 
   <ion-slide>
     <div class="padding"> 
-      <h3 ng-hide="$ctrl.submittedOnce">Ready For Your Result?</h3>
-      <h3 ng-show="$ctrl.submittedOnce">Update Your Result</h3>
+      <h3 ng-hide="$ctrl.submittedOnce">Ready for your result?</h3>
+      <h3 ng-show="$ctrl.submittedOnce">Update your result.</h3>
       <div class="yippee-btn">
 
         <button ng-click="$ctrl.submitForm()" type="button" class="button button-block button-positive">
