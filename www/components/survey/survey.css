@@ -1,17 +1,14 @@
-survey {
-  color: darkcyan;
-}
 
-h3 {
+survey h3 {
   text-align: center;
   padding: 10px 0;
 }
 
-img {
+survey img {
   width: 100%
 }
 
-button {
+survey button {
   margin-left: 35%;
 }
 
@@ -19,7 +16,7 @@ button {
   height: 100%
 }
 
-.item {
+survey .item {
   padding: 0;
 }
 
