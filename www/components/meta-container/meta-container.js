@@ -2,7 +2,9 @@
 angular
   .module('app')
   .component('metaContainer', {
-    bindings: {},
+    bindings: {
+      closeMeta: '&'
+    },
     controller: controller,
     templateUrl: 'components/meta-container/meta-container.html'
   })

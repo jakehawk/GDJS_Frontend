@@ -6,7 +6,7 @@
 	</ul>
 
 	<div>
-		<survey ng-if="$ctrl.active === 'survey'" ></survey>
+		<survey ng-if="$ctrl.active === 'survey'" close-meta="$ctrl.closeMeta()"></survey>
 		<internal ng-if="$ctrl.active === 'internal'" ></internal>
 	</div>
 

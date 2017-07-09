@@ -3,12 +3,13 @@
 <ion-content class="home">
 
   <div class="item item-avatar">
-    <img ng-src="{{ $ctrl.imageUrl || 'assets/placeholder.png' }}">
+    <img ng-src="{{ $ctrl.image || 'assets/placeholder.png' }}">
     <h2>{{ $ctrl.title || 'Loading...'}}</h2>
+    <p>{{ $ctrl.year }}</p>
   </div>
 
   <div class="item item-image">
-    <img ng-src="{{$ctrl.imageUrl || 'assets/placeholder.png' }}">
+    <img ng-src="{{$ctrl.image || 'assets/placeholder.png' }}">
   </div>
 
   <a class="item item-icon-left assertive" href="#">
@@ -16,8 +17,5 @@
     Start Watching
   </a>
 
-	<button on-touch="$ctrl.getRandom()" class="button button-full button-assertive">
-  	Get New Recommendation
-	</button>
 </ion-content>
 
