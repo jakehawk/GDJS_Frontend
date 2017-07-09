@@ -21,14 +21,14 @@
   <ion-slide>
     <div class="padding">
       <ion-list>
-        <h3>What genres do you like?</h3>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.drama">Drama</ion-checkbox>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.comedy">Comedy</ion-checkbox>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.horror">Horror</ion-checkbox>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.action">Action &amp; Adventure</ion-checkbox>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.romance">Romance</ion-checkbox>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.animation">Animation</ion-checkbox>
-        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.science">Sci-fi &amp; Fantasy</ion-checkbox>
+        <h3>What do you wish you did more of today?</h3>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.drama">Feel</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.comedy">Laugh</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.horror">Scream</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.action">Adrenaline Rush</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.romance">Love</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.animation">Draw</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.science">Ponder the existence of the universe...</ion-checkbox>
       </ion-list>
     </div>
   </ion-slide>
@@ -81,7 +81,7 @@
   </ion-slide>
 
   <ion-slide>
-    <div class="padding"> 
+    <div class="padding">
       <h3 ng-hide="$ctrl.submittedOnce">Ready for your result?</h3>
       <h3 ng-show="$ctrl.submittedOnce">Update your result.</h3>
       <div class="yippee-btn">
