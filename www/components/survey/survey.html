@@ -1,65 +1,82 @@
 <ion-slide-box on-slide-changed="slideChanged(survey)">
 
-  <ion-slide>
+  <ion-slide class="welcome-container">
     <h1>Welcome!</h1>
     <p>Answer the following questions to get the next movie you should watch!</p>
     <p>We think they're are too many options to go through in the world today, so we thought that giving you one option can speed up the process 🙂</p>
   </ion-slide>
 
-  <form class="" action="survey.html" method="post">
+  <!-- <form class="" action="survey.html" method="post"> -->
   <ion-slide>
-    <h3>Have You Seen Almost Famous?</h3>
-    <input type="button" name="FamousYes" value="yes">
-    <input type="button" name="FamousNo" value="no">
+    <ion-list radio-group role="radiogroup">
+      <h3>Have You Seen Almost Famous?</h3>
+      <ion-item><ion-radio value="famousYes" checked><ion-label>Yes</ion-label></ion-radio></ion-item>
+      <ion-item><ion-radio value="famousNo" checked><ion-label>No</ion-label></ion-radio></ion-item>
+    </ion-list>
   </ion-slide>
 
   <ion-slide>
-    <h3>What Genres Do You Like</h3>
-    <input type="button" name="Drama" value="">
-    <input type="button" name="Comedy" value="">
-    <input type="button" name="Action" value="">
-    <input type="button" name="Animation" value="">
-    <input type="button" name="Mystery" value="">
-    <input type="button" name="Science" value="">
-    <input type="button" name="Crime" value="">
-  </ion-slide>
-  <ion-slide>
-    <h3>What Mood Are You In?</h3>
-    <input type="button" name="Bloody" value="">
-    <input type="button" name="Scary" value="">
-    <input type="button" name="Happy" value="">
-    <input type="button" name="Moody" value="">
-    <input type="button" name="Heroic" value="">
-    <input type="button" name="Mysterious" value="">
+    <ion-list>
+      <h3>What Genres Do You Like</h3>
+      <ion-checkbox type="checkbox" name="Drama" value="Drama">Drama</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Comedy" value="Comedy">Comedy</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Action" value="Action">Action</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Animation" value="Animation">Animation</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Mystery" value="Mystery">Mystery</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Science" value="Science">Science</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Crime" value="Crime">Crime</ion-checkbox>
+    </ion-list>
   </ion-slide>
 
   <ion-slide>
-    <h3>Do You Like Romantic Comedies</h3>
-    <input type="button" name="RomcomYes" value="yes">
-    <input type="button" name="RomcomNo" value="no">
+    <ion-list>
+      <h3>What Mood Are You In?</h3>
+      <ion-checkbox type="checkbox" name="Murderous" value="Murderous">Murderous</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Bloody" value="Bloody">Bloody</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Scary" value="Scary">Scary</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Happy" value="Happy">Happy</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Moody" value="Moody">Moody</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Heroic" value="Heroic">Heroic</ion-checkbox>
+      <ion-checkbox type="checkbox" name="Mysterious" value="Mysterious">Mysterious</ion-checkbox>
+    </ion-list>
   </ion-slide>
 
   <ion-slide>
-    <h3>Would You Like To Cry</h3>
-    <input type="button" name="CryYes" value="yes">
-    <input type="button" name="CryNo" value="no">
+    <ion-list>
+      <h3>Do You Like Romantic Comedies</h3>
+      <ion-item><ion-radio value="RomcomYes" checked><ion-label>Yes</ion-label></ion-radio></ion-item>
+      <ion-item><ion-radio value="RomcomNo" checked><ion-label>No</ion-label></ion-radio></ion-item>
+    </ion-list>
   </ion-slide>
 
   <ion-slide>
-    <h3>Do You Know Who This Actor Is?</h3>
-    <img src="http://www.bloodygoodhorror.com/bgh/files/reviews/caps/vampires-kiss.jpg" alt="Cage">
-    <input type="button" name="CageYes" value="yes">
-    <input type="button" name="CageNo" value="no">
+    <ion-list>
+      <h3>Would You Mind Crying?</h3>
+      <ion-item><ion-radio value="CryYes" checked><ion-label>Yes</ion-label></ion-radio></ion-item>
+      <ion-item><ion-radio value="CryNo" checked><ion-label>No</ion-label></ion-radio></ion-item>
+    </ion-list>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-list>
+      <h3>Do You Know Who This Actor Is?</h3>
+      <img src="http://www.bloodygoodhorror.com/bgh/files/reviews/caps/vampires-kiss.jpg" alt="Cage">
+      <ion-item><ion-radio value="CageYes" checked><ion-label>Yes</ion-label></ion-radio></ion-item>
+      <ion-item><ion-radio value="CageNo" checked><ion-label>No</ion-label></ion-radio></ion-item>
+    </ion-list>
     <!-- if no then it automatically recommends "Snake Eyes" -->
   </ion-slide>
 
   <ion-slide>
     <h3>Ready For Your Result?!</h3>
-    <input type="submit" name="YAY!" value="yes">
+    <div class="yippee-btn">
+
+      <button type="button" name="button">yippee ki-yay</button>
+    </div>
     <!-- if no then it automatically recommends "Snake Eyes" -->
   </ion-slide>
 
-</form>
+<!-- </form> -->
 
 
 
