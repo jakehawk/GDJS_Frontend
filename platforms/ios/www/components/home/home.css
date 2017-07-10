@@ -1,0 +1,44 @@
+.home {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.home .main {
+	position: relative;
+	z-index: 0;
+	background-color: #252525;
+	display: flex;
+	height: calc(100% - 100px);
+}
+
+.home .main img{
+	width: 100%;
+}
+
+.home .main .gradient {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  height: 125px;
+  width: 100%;
+  background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0.15), rgba(255,255,255,0));
+}
+
+.home .details {
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+	position: relative;
+	z-index: 1;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
+	height: 110px;
+}
+
+.home .details .item {
+	border: none;
+}
+
+.home .details a {
+	text-decoration: none;
+}

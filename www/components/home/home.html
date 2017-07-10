@@ -8,6 +8,7 @@
       <h2>{{ $ctrl.movie.title || 'Loading...' | limitTo: 40}}<span ng-if="$ctrl.movie.title.length > 40">...</span></h2>
       <p>{{ $ctrl.movie.year }}<span ng-if="$ctrl.movie.rating"> | </span>{{ $ctrl.movie.rating }}</p>
       <a ng-if="$ctrl.movie.title" class="assertive" href="#" on-tap="$ctrl.openBrowser()">
+      <!-- <a ng-if="$ctrl.movie.title" class="assertive" href="#" on-tap="window.open('http://google.com', '_system')"> -->
         <i class="icon ion-film-marker"></i>
         Watch
       </a>
