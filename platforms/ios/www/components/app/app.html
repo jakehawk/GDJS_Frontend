@@ -1,0 +1,34 @@
+<ion-view class="app wrapper">
+	<ion-pane>
+
+		<!-- <meta-container></meta-container> -->
+<!-- 		<meta-container 
+			ng-if="$ctrl.meta" 
+			close-meta="$ctrl.closeMeta()" 
+			get-genre="$ctrl.getGenre(arg)"
+		></meta-container> -->
+		<survey
+			get-genre="$ctrl.getGenre(arg)"
+			ng-if="$ctrl.surveyOpen"
+		></survey>
+		<browser-view
+			link="$ctrl.movie.link"
+			ng-if="$ctrl.browserOpen"
+		></browser-view>
+		<home movie="$ctrl.movie" open-browser="$ctrl.browserOpen = true"></home>
+
+		<div id="survey-button" class="assertive action-button" on-tap="$ctrl.surveyOpen = true" ng-if="!$ctrl.surveyOpen && !$ctrl.browserOpen" >
+			<i class="ion-clipboard"></i>
+		</div>
+
+		<div id="movie-button" class="assertive action-button" on-tap="$ctrl.getRandom()" ng-if="!$ctrl.surveyOpen && !$ctrl.browserOpen">
+			<i class="ion-android-film"></i>
+		</div>
+
+		<div id="close-button" class="assertive action-button" on-tap="$ctrl.close()" ng-if="$ctrl.surveyOpen || $ctrl.browserOpen">
+			<i class="ion-android-close"></i>
+		</div>
+
+	</ion-pane>
+
+</ion-view>

@@ -1,0 +1,101 @@
+<ion-slide-box on-slide-changed="$ctrl.slideChanged(survey)">
+
+  <ion-slide class="welcome-container">
+    <h1>Welcome!</h1>
+    <p>Answer the following questions to get the next movie you should watch!</p>
+    <p>We think there're too many options to go through in the world today, so we thought that giving you one option can speed up the process</p>
+    <p>🙂</p>
+  </ion-slide>
+
+  <!-- <form class="" action="survey.html" method="post"> -->
+  <ion-slide>
+    <div class="padding">
+      <ion-list radio-group role="radiogroup">
+        <h3>Have you seen almost famous?</h3>
+        <ion-radio ng-model="$ctrl.formData.famousSeen" ng-value="true"><ion-label>Yes</ion-label></ion-radio>
+        <ion-radio ng-model="$ctrl.formData.famousSeen" ng-value="false"><ion-label>No</ion-label></ion-radio>
+      </ion-list>
+    </div>
+  </ion-slide>
+
+  <ion-slide>
+    <div class="padding">
+      <ion-list>
+        <h3>What do you wish you did more of today?</h3>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.drama">Feel</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.comedy">Laugh</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.horror">Scream</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.action">Adrenaline Rush</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.romance">Love</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.animation">Draw</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.genre.science">Ponder the existence of the universe...</ion-checkbox>
+      </ion-list>
+    </div>
+  </ion-slide>
+
+  <!-- <ion-slide>
+    <div class="padding">
+      <ion-list>
+        <h3>How are you feeling today?</h3>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.mood.murderous">Murderous</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.mood.bloody">Bloody</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.mood.scary">Scary</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.mood.happy">Happy</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.mood.moody">Moody</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.mood.heroic">Heroic</ion-checkbox>
+        <ion-checkbox type="checkbox" ng-model="$ctrl.formData.mood.mysterious">Mysterious</ion-checkbox>
+      </ion-list>
+    </div>
+  </ion-slide> -->
+
+  <ion-slide>
+    <div class="padding">
+      <ion-list>
+        <h3>Do you like romantic comedies?</h3>
+        <ion-radio ng-model="$ctrl.formData.romCom" ng-value="true"><ion-label>Yes</ion-label></ion-radio>
+        <ion-radio ng-model="$ctrl.formData.romCom" ng-value="false"><ion-label>No</ion-label></ion-radio>
+      </ion-list>
+    </div>
+  </ion-slide>
+
+  <ion-slide>
+    <div class="padding">
+      <ion-list>
+        <h3>Would you mind crying?</h3>
+        <ion-radio ng-model="$ctrl.formData.cry" ng-value="true"><ion-label>Yes</ion-label></ion-radio>
+        <ion-radio ng-model="$ctrl.formData.cry" ng-value="false"><ion-label>No</ion-label></ion-radio>
+      </ion-list>
+    </div>
+  </ion-slide>
+
+  <ion-slide>
+    <div class="padding">
+      <ion-list>
+        <h3>Do you know who this man is?</h3>
+        <img src="http://www.bloodygoodhorror.com/bgh/files/reviews/caps/vampires-kiss.jpg" alt="Cage">
+        <ion-radio ng-model="$ctrl.formData.cage" ng-value="true"><ion-label>Yes</ion-label></ion-radio>
+        <ion-radio ng-model="$ctrl.formData.cage" ng-value="false"><ion-label>No</ion-label></ion-radio>
+      </ion-list>
+      <!-- if no then it automatically recommends "Snake Eyes" -->
+    </div>
+  </ion-slide>
+
+  <ion-slide>
+    <div class="padding">
+      <h3 ng-hide="$ctrl.submittedOnce">Ready for your result?</h3>
+      <h3 ng-show="$ctrl.submittedOnce">Update your result.</h3>
+      <div class="yippee-btn">
+
+        <button ng-click="$ctrl.submitForm()" type="button" class="button button-block button-positive">
+          <span>Yippee Ki-Yay</span>
+        </button>
+      </div>
+      <!-- if no then it automatically recommends "Snake Eyes" -->
+    </div>
+  </ion-slide>
+
+<!-- </form> -->
+
+
+
+</ion-slide-box>

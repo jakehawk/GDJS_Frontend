@@ -1,0 +1,17 @@
+<div class="meta-container">
+
+	<ul class="navigation">
+		<li on-touch="$ctrl.setActive('survey')" ng-class="{active: $ctrl.active === 'survey'}">Survey</li>
+		<li on-touch="$ctrl.setActive('internal')" ng-class="{active: $ctrl.active === 'internal'}">About</li>	
+	</ul>
+
+	<div>
+		<survey 
+			ng-if="$ctrl.active === 'survey'" 
+			close-meta="$ctrl.closeMeta()" 
+			get-genre="$ctrl.getGenre({arg: arg})"
+		></survey>
+		<internal ng-if="$ctrl.active === 'internal'" ></internal>
+	</div>
+
+</div>

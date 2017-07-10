@@ -1,0 +1,23 @@
+
+
+<div class="home">
+
+  <div class="details">
+    <div class="item item-avatar">
+      <img ng-src="{{ $ctrl.movie.image || 'assets/placeholder.png' }}">
+      <h2>{{ $ctrl.movie.title || 'Loading...' | limitTo: 40}}<span ng-if="$ctrl.movie.title.length > 40">...</span></h2>
+      <p>{{ $ctrl.movie.year }}<span ng-if="$ctrl.movie.rating"> | </span>{{ $ctrl.movie.rating }}</p>
+      <a ng-if="$ctrl.movie.title" class="assertive" href="#" on-tap="$ctrl.openBrowser()">
+        <i class="icon ion-film-marker"></i>
+        Watch
+      </a>
+    </div>
+  </div>
+
+  <div class="main">
+    <img ng-src="{{$ctrl.movie.image || 'assets/placeholder.png' }}">
+    <!-- <div class="gradient"></div> -->
+  </div>
+
+</div>
+

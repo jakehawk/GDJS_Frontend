@@ -1,0 +1,43 @@
+
+survey {
+  padding-top: 2em;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+	position: absolute;
+	background-color: white;
+}
+
+survey .slider {
+  height: 90%;
+}
+
+survey h3 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+survey img {
+  width: 100%
+}
+
+survey button {
+  margin-left: 35%;
+}
+
+.slider {
+  height: 100%
+}
+
+.slider-pager {
+  bottom: 1px;
+}
+
+survey .item {
+  /*padding: 0;*/
+}
+
+.welcome-container {
+  text-align: center;
+  padding: 10px 35px;
+}
