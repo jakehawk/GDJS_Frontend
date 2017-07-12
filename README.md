@@ -1,3 +1,3 @@
-# GDJS
+# GDJS - Movie Roulette
 
-Stevie's Edit ❤️
+[Link to back-end server code](https://github.com/jakehawk/GDJS_Backend)
